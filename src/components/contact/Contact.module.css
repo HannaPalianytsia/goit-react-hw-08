@@ -1,0 +1,26 @@
+.card {
+  display: flex;
+  gap: 32px;
+  place-items: center;
+}
+.cardBtn {
+  background-color: inherit;
+  border: 1px solid #111;
+  border-radius: 4px;
+  padding: 4px;
+  max-width: 60px;
+  max-height: 24px;
+}
+
+.cardBtn:hover {
+  background-color: beige;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.userInfo {
+  display: flex;
+  gap: 8px;
+}

@@ -1,0 +1,11 @@
+.card {
+  display: block;
+  border: 2px solid #111;
+  border-radius: 12px;
+  padding: 12px;
+}
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
