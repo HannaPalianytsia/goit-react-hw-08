@@ -1,0 +1,10 @@
+.navigation {
+  height: 28px;
+}
+.navLink {
+  padding: 8px;
+}
+.navLink:hover,
+.navLink:focus {
+  text-decoration: underline;
+}

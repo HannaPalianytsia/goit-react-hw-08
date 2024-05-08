@@ -1,0 +1,11 @@
+.userMenu {
+  display: flex;
+}
+.logoutBtn {
+  background-color: inherit;
+  border: none;
+  padding: 4px;
+}
+.logoutBtn:hover {
+  background-color: beige;
+}

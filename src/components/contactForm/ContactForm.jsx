@@ -4,12 +4,27 @@ import * as Yup from "yup";
 import styles from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact({ name: values.name, number: values.number }));
+    dispatch(addContact({ name: values.name, number: values.number }))
+      .unwrap()
+      .then(() => {
+        iziToast.success({
+          position: "topRight",
+          message: "Сontact added successfully!",
+        });
+      })
+      .catch(() => {
+        iziToast.error({
+          position: "topRight",
+          message: "Something is wrong, the contact has not been added.",
+        });
+      });
     actions.resetForm();
   };
 
@@ -50,7 +65,7 @@ const ContactForm = () => {
             <ErrorMessage name="number" as="span" />
           </div>
           <button className={styles.submitBtn} type="submit">
-            Submit
+            Add contact
           </button>
         </Form>
       </Formik>

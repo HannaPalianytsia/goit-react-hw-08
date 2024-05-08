@@ -2,6 +2,7 @@
   display: flex;
   gap: 32px;
   place-items: center;
+  justify-content: space-around;
 }
 .cardBtn {
   background-color: inherit;

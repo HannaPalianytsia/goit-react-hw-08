@@ -15,14 +15,14 @@ const ContactsPage = lazy(() => import("./pages/ContactsPage"));
 
 function App() {
   const dispatch = useDispatch();
-  const { isRefreshing } = useSelector(selectIsRefreshing);
+  const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <p>Refreshing user...</p>
   ) : (
     <Layout>
       <Routes>
